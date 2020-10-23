@@ -8,6 +8,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
 public class Cliente {
 	
@@ -18,7 +23,7 @@ public class Cliente {
 	@NotBlank
 	@Size (max = 60)
 	private String nome;
-	
+
 	@NotBlank
 	@Email
 	@Size (max = 255)
@@ -28,31 +33,6 @@ public class Cliente {
 	@Size (max = 20)
 	private String telefone;
 	
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return nome;
-	}
-	public void setName(String name) {
-		this.nome = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
